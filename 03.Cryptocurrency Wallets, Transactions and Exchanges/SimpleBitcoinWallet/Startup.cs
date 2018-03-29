@@ -1,13 +1,11 @@
 ﻿namespace SimpleBitcoinWallet
 {
+    using HBitcoin.KeyManagement;
+    using NBitcoin;
+    using QBitNinja.Client;
     using System;
     using System.Globalization;
     using System.Text;
-    using HBitcoin;
-    using HBitcoin.KeyManagement;
-    using NBitcoin;
-    using QBitNinja;
-    using QBitNinja.Client;
 
     public class Startup
     {
