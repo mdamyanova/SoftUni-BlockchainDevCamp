@@ -1,8 +1,6 @@
 import java.math.BigInteger;
 import org.bouncycastle.util.encoders.Hex;
 import org.web3j.crypto.*;
-import org.json.simple.JSONObject;
-
 
 public class EthereumSignatureCreator {
 
@@ -31,12 +29,12 @@ public class EthereumSignatureCreator {
         String s = Hex.toHexString(signature.getS());
 
         // Output - JSON with signed message + signature[v, r, s]
-        JSONObject result = new JSONObject();
-        result.put("signature", Hex.toHexString(messageHash));
-        result.put("v", v);
-        result.put("r", r);
-        result.put("s", s);
+        //JSONObject result = new JSONObject();
+        //result.put("v", v);
+        //result.put("r", r);
+        //result.put("s", s);
 
-        System.out.println(result.toJSONString());
+        // more readable output
+        System.out.printf("Signature: [v = %d, r = %s, s = %s]\n", v, r, s);
     }
 }
